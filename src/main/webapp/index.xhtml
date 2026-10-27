@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="jakarta.faces.html" xmlns:f="jakarta.faces.core" xmlns:p="jakarta.faces.passthrough" lang="en">
+<h:head>
+  <title>Calculator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <h:outputStylesheet library="css" name="calculator.css"/>
+</h:head>
+<h:body>
+  <main class="calculator">
+    <p class="eyebrow">Presentación XCS</p>
+    <h1>Calculator</h1>
+    <h:form id="calc">
+      <h:panelGroup id="screen" layout="block" styleClass="screen" p:role="status" p:aria-live="polite">
+        <div class="expression"><h:outputText value="#{calculator.expression}"/></div>
+        <div class="display"><h:outputText value="#{calculator.display}"/></div>
+        <div class="error"><h:outputText value="#{calculator.error}"/></div>
+      </h:panelGroup>
+      <div class="keys">
+        <f:ajax execute="@this" render="@form">
+          <h:commandButton id="clear" value="C" action="#{calculator.clear}" styleClass="clear"/>
+          <h:commandButton id="negate" value="±" action="#{calculator.negate}"/>
+          <h:commandButton id="divide" value="÷" action="#{calculator.selectOperation('/')}" styleClass="operator"/>
+          <h:commandButton id="multiply" value="×" action="#{calculator.selectOperation('*')}" styleClass="operator"/>
+          <h:commandButton id="seven" value="7" action="#{calculator.digit('7')}"/>
+          <h:commandButton id="eight" value="8" action="#{calculator.digit('8')}"/>
+          <h:commandButton id="nine" value="9" action="#{calculator.digit('9')}"/>
+          <h:commandButton id="subtract" value="−" action="#{calculator.selectOperation('-')}" styleClass="operator"/>
+          <h:commandButton id="four" value="4" action="#{calculator.digit('4')}"/>
+          <h:commandButton id="five" value="5" action="#{calculator.digit('5')}"/>
+          <h:commandButton id="six" value="6" action="#{calculator.digit('6')}"/>
+          <h:commandButton id="add" value="+" action="#{calculator.selectOperation('+')}" styleClass="operator"/>
+          <h:commandButton id="one" value="1" action="#{calculator.digit('1')}"/>
+          <h:commandButton id="two" value="2" action="#{calculator.digit('2')}"/>
+          <h:commandButton id="three" value="3" action="#{calculator.digit('3')}"/>
+          <h:commandButton id="equals" value="=" action="#{calculator.equals}" styleClass="equals"/>
+          <h:commandButton id="zero" value="0" action="#{calculator.digit('0')}" styleClass="zero"/>
+          <h:commandButton id="decimal" value="." action="#{calculator.decimal}"/>
+        </f:ajax>
+      </div>
+    </h:form>
+  </main>
+</h:body>
+</html>

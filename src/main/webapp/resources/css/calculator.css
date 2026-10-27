@@ -1,0 +1,20 @@
+:root { font-family: system-ui, sans-serif; color: #172b29; background: #eff4f0; }
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 24px; }
+.calculator { width: 100%; max-width: 390px; background: #fff; border: 1px solid #dce6df; border-radius: 24px; padding: 28px; box-shadow: 0 20px 60px #193c2810; }
+.eyebrow { font-size: 10px; letter-spacing: .18em; color: #507267; font-weight: 700; }
+h1 { font-size: 29px; margin: 10px 0; letter-spacing: -.04em; }
+.subtitle, .hint { color: #65756f; font-size: 13px; line-height: 1.6; }
+.screen { background: #f1f6f2; padding: 18px; border-radius: 14px; text-align: right; margin: 24px 0 18px; overflow-wrap: anywhere; }
+.expression { min-height: 20px; font-size: 13px; color: #557266; }
+.display { min-height: 48px; font-size: 36px; font-variant-numeric: tabular-nums; }
+.error { min-height: 32px; padding-top: 8px; font-size: 12px; color: #a52c27; }
+.keys { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 9px; }
+.keys input { min-width: 0; min-height: 56px; border: 0; border-radius: 12px; background: #f2f4f3; color: #253d34; font: inherit; font-size: 20px; cursor: pointer; }
+.keys input:hover { filter: brightness(.94); }
+.keys input:focus-visible { outline: 3px solid #427f64; outline-offset: 2px; }
+.keys .operator { background: #e3efe7; }
+.keys .clear { background: #f7e9e3; color: #8c4433; }
+.keys .equals { background: #235d44; color: white; grid-row: span 2; }
+.keys .zero { grid-column: span 2; }
+.hint { margin: 18px 0 0; font-size: 11px; }
