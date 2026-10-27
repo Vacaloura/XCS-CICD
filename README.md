@@ -2,6 +2,8 @@
 
 MODIFICACION PARA PROBAR QUE CI DETECTA LOS CAMBIOS CUANDO SE REALIZA EL COMMIT A LA RAMA
 
+MODIFICACION 2 PARA SACAR UNA CAPTURA
+
 Calculadora mínima para una presentación de CI/CD.
 
 - Usa un EJB sin estado para las operaciones,
