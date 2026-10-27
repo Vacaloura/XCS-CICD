@@ -1,5 +1,7 @@
 # Jakarta EE Calculator
 
+MODIFICACION PARA PROBAR QUE CI DETECTA LOS CAMBIOS CUANDO SE REALIZA EL COMMIT A LA RAMA
+
 Calculadora mínima para una presentación de CI/CD.
 
 - Usa un EJB sin estado para las operaciones,
