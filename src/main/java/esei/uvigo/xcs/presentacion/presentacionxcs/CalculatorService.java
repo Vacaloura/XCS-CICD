@@ -12,7 +12,7 @@ public class CalculatorService {
             throw new CalculationException("Enter two numbers and select an operation.");
         }
         BigDecimal result = switch (operation) {
-            case "+" -> left.subtract(right); // new BigDecimal(4) o BigDecimal(5) como ejemplo de tests que fallan y luego se pone: left.add(right) para que funcione bien
+            case "+" -> left.add(right); // new BigDecimal(4) o BigDecimal(5) como ejemplo de tests que fallan y luego se pone: left.add(right) para que funcione bien
             case "-" -> left.subtract(right);
             case "*" -> left.multiply(right);
             case "/" -> {
